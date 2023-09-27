@@ -14,8 +14,9 @@ namespace WebAPI.Controllers;
 public class BlogsController : BaseController
 {
     [HttpPost]
-    public async Task<IActionResult> Add([FromBody] CreateBlogCommand createBlogCommand)
+    public async Task<IActionResult> Add([FromForm] CreateBlogDto createBlogDto, IFormFile image)
     {
+        CreateBlogCommand createBlogCommand = new() { CreateBlogDto= createBlogDto , Image= image};
         CreatedBlogResponse response = await Mediator.Send(createBlogCommand);
 
         return Created(uri: "", response);

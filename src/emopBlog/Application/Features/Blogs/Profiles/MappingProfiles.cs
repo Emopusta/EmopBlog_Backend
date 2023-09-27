@@ -16,6 +16,7 @@ public class MappingProfiles : Profile
     {
         CreateMap<Blog, CreateBlogCommand>().ReverseMap();
         CreateMap<Blog, CreatedBlogResponse>().ReverseMap();
+        CreateMap<Blog, CreateBlogDto>().ReverseMap();
         CreateMap<Blog, UpdateBlogCommand>().ReverseMap();
         CreateMap<Blog, UpdatedBlogResponse>().ReverseMap();
         CreateMap<Blog, DeleteBlogCommand>().ReverseMap();

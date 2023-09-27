@@ -12,7 +12,7 @@ using static Application.Features.Blogs.Constants.BlogsOperationClaims;
 
 namespace Application.Features.Blogs.Queries.GetList;
 
-public class GetListBlogQuery : IRequest<GetListResponse<GetListBlogListItemDto>>, ISecuredRequest, ICachableRequest
+public class GetListBlogQuery : IRequest<GetListResponse<GetListBlogListItemDto>>, ICachableRequest
 {
     public PageRequest PageRequest { get; set; }
 
